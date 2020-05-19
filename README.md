@@ -9,6 +9,7 @@ Graphiql is UI display to fire all queryies , mutations of graphql api.
 
 # graphql-springboot
 Tool URL: http://localhost:8080/graphiql
+
 API URL: http://localhost:8080/graphql
 
 POST REQUEST 
