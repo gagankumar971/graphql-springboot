@@ -1,5 +1,15 @@
+Graphql APIs is exposed on single end point unlike Rest APIs where we have different end point for different api. 
+Fields in the response provided from Graphql API is as per user requirement(i.e dynamic in nature).
+for eg: At the time of calling graphql api, requester can also decide how many no. of fields would be return from particular domain class.
+
+In this project We have created domains like Order, Item and relationship between these are defined in graphql schema (not in domain class itself).
+These domains are queried/inserted from specific graphql api with the use of graphql schema, resolver, mutation etc.
+
+Graphiql is UI display to fire all queryies , mutations of graphql api.
+
 # graphql-springboot
-url: http://localhost:8080/graphiql
+Tool URL: http://localhost:8080/graphiql
+API URL: http://localhost:8080/graphql
 
 POST REQUEST 
 =============
