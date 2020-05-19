@@ -1,0 +1,51 @@
+type Order {
+    orderId: ID!
+    orderNumber: String!
+    orderTitle: String!
+    orderText: String!
+    orderCategory: String
+    orderStatus: String
+    orderTotal: Float
+    items: [Item]
+}
+
+type Item {
+    itemId: ID!
+    orderId: Int
+    itemNumber: String!
+    itemName: String!
+    itemStatus: String
+    itemPrice: Float
+    companyId: Long
+    companyName: String
+    thumbnail: String
+   
+}
+input InputItem {
+    itemId: ID!
+    orderId: Int
+    itemNumber: String!
+    itemName: String!
+    itemStatus: String
+    itemPrice: Float
+    companyId: Long
+    companyName: String
+    thumbnail: String
+   
+}
+
+# The Root Query for the application
+type Query {
+    recentOrders(count: Int, offset: Int): [Order]!
+    orderSearch(orderId: Int): Order
+    itemSearch(itemId: Int): Item
+    allItems:[Item]!
+}
+# The Root Mutation for the application
+type Mutation {
+    feedOrder(orderId: ID!, orderNumber: String!, orderTitle: String!, orderText: String!, orderCategory: String, orderStatus: String, orderTotal: Float, items: [InputItem]) : Order!
+}
+
+	
+
+
