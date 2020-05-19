@@ -47,12 +47,13 @@ public class ApplicationStartupRunner implements CommandLineRunner {
 	                		.builder()
 	                		.itemId(itemId)
 	                		.itemNumber("IT" + itemId)
-	                .itemName("Item " + String.valueOf(itemId))		
-	                .thumbnail("http://example.com/items/" + itemId)
-	                .orderId(orderId)
-	                .itemPrice(Double.valueOf(itemId)).build();
-	            	orderTotal = orderTotal + itemPrice;
-	            	items.add(item);
+			                .itemName("Item " + String.valueOf(itemId))	
+			                .itemStatus('A')
+			                .thumbnail("http://example.com/items/" + itemId)
+			                .orderId(orderId)
+			                .itemPrice(Double.valueOf(itemId)).build();
+			            	orderTotal = orderTotal + itemPrice;
+			            	items.add(item);
         }
 	    		Order order = Order.builder()
 				  .orderId(orderId)
